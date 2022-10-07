@@ -1,4 +1,4 @@
-.PHONY: all build install uninstall dvi dist distdir clean test gcov_report gcov_open leaks
+.PHONY: all build install uninstall dvi dist distdir clean test gcov_report gcov_open leaks main
 
 # ========================================================================================================================== #
 
@@ -74,7 +74,7 @@ distdir: build
 
 clean:
 	@$(DEL_FILE) *.o *.a *.gcno *.gcda *.info *.out *.h.gch *.log *.pro.user $(TESTEXE) $(HOME)/Applications/Maze.tar.gz ./datasets/save_*.txt
-	@$(DEL_DIR) ./$(REPORTDIR) ./$(BUILDDIR) ./$(QTBUILDDIR) *.dSYM
+	@$(DEL_DIR) ./$(REPORTDIR) ./$(BUILDDIR) ./$(QTBUILDDIR) $(DISTDIR) *.dSYM
 
 test:
 	@clear
@@ -92,3 +92,7 @@ gcov_open:
 leaks: test
 	@$(LEAKS)
 	@make clean
+
+main: clean
+	@$(CXX) $(FLAGS) -g main.cpp cave.cpp
+	@./a.out
