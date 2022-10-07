@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      body {
+         color: black;
+      }
+
+   </style>
+</head>
+
+<body>
+   <h1 id="maze">Maze</h1>
+   <p>The program build with Makefile by target "install". The target "uninstall" delete the program.</p>
+   <h2 id="-maze">Maze</h2>
+
+   <img src="./images/maze.png" width="45%" height="auto">
+
+   <h2 id="-">Maze description</h2>
+
+   <p>The maze can be stored in a file as a number of rows and columns, as well as two matrices containing the positions of vertical and horizontal walls respectively. The first matrix shows the wall to the right of each cell, and the second - the wall at the bottom. </p>
+
+   <p>An example of such a file:</p>
+
+<pre><code><span class="hljs-symbol">4 </span><span class="hljs-number">4</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+
+<span class="hljs-symbol">1 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>
+</code></pre>
+
+   <p>The maze described in this file:</p>
+
+   <img src="./images/maze4.jpg" width="15%" height="auto">
+
+   <p>The program allows:</p>
+   <ul>
+      <li>to load the maze from a file, which is set in the format described above;</li>
+      <li>to generate a perfect maze;</li>
+      <li>to show the solution to any maze currently shown on the screen.</li>
+   </ul>
+   <p>Maximum size of the maze is 50x50.</p>
+
+   <h2 id="-cave">Cave</h2>
+
+   <p>
+      <img src="./images/cave_before.png" alt="Фотография 1" width="45%" height="auto">
+      <img src="./images/cave_after.png" alt="Фотография 2" width="45%" height="auto">
+    </p>
+
+   <h2 id="-cave">Caves description</h2>
+
+   <p>A cave that has passed 0 simulation steps (only initialized) can be stored in the file as a number of rows and columns, as well as a matrix containing the positions of "live" and "dead" cells.</p>
+
+   <p>An example of such a file:</p>
+
+<pre><code><span class="hljs-symbol">4 </span><span class="hljs-number">4</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">1 </span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>
+<span class="hljs-symbol">0 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>
+</code></pre>
+
+   <p>The cave described in this file:</p>
+
+   <img src="./images/cave3.jpg" width="15%" height="auto">
+
+   <p>The program allows:</p>
+   <ul>
+      <li>to load the cave from a file, which is set in the format described above;</li>
+      <li>to generate a cave.</li>
+   </ul>
+   <p>The user sets the limits for "birth" and "death" of a cell, as well as the chance for the starting initialization of the cell, the "birth" and "death" limits can have values from 0 to 7.</p>
+   <p>There is a step-by-step mode for rendering the results of the algorithm in two variants:</p>
+   <ul>
+      <li>pressing the "Start" button will lead to rendering the next iteration of the algorithm if number of milliseconds sets equal to 0;</li>
+      <li>pressing the "Start" button starts rendering iterations of the algorithm with a frequency of 1 step in N milliseconds if number of milliseconds is more than 0.
+      </li>
+   </ul>
+
+   <p>Maximum size of the cave is 50 x 50.</p>
+</body>
+
+</html>

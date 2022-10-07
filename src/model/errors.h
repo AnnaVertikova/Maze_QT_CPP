@@ -1,0 +1,11 @@
+#ifndef SRC_MODEL_ERRORS_H_
+#define SRC_MODEL_ERRORS_H_
+
+enum class ErrorType {
+  WITHOUT_ERRORS,
+  WRONG_FILENAME,
+  WRONG_DATA_FORMAT,
+  EMPTY_FILE
+};
+
+#endif  // SRC_MODEL_ERRORS_H_
