@@ -46,5 +46,3 @@ Add cave generation using a cellular automaton:
     - Pressing the next step button will lead to rendering the next iteration of the algorithm
     - Pressing the automatic work button starts rendering iterations of the algorithm with a frequency of 1 step in `N` milliseconds, where the number of milliseconds `N` is set through a special field in the user interface
 - Full coverage of the cave generation module with unit-tests
-
-# Maze_QT_CPP
